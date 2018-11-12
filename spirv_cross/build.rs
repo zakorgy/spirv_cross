@@ -15,6 +15,9 @@ fn main() {
     } else {
         build.flag_if_supported("-std=c++14");
     }
+    
+    build.flag("-DSPIRV_CROSS_EXCEPTIONS_TO_ASSERTIONS=ON");
+    build.flag("-fno-exceptions");
 
     build
         .file("src/wrapper.cpp")
