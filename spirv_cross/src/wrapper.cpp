@@ -7,7 +7,7 @@
 
 static const char *latest_exception_message;
 
-#define INTERNAL_RESULT(block_to_attempt)                 \
+/*#define INTERNAL_RESULT(block_to_attempt)                 \
     do                                                    \
     {                                                     \
         try                                               \
@@ -31,7 +31,8 @@ static const char *latest_exception_message;
             return ScInternalResult::Unhandled;           \
         }                                                 \
         return ScInternalResult::Unhandled;               \
-    } while (0);
+    } while (0)*/
+#define INTERNAL_RESULT(block_to_attempt) block_to_attempt
 
 extern "C"
 {
