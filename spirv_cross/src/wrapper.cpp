@@ -1,4 +1,4 @@
-#pragma warning(disable : 4996 4101)
+//#pragma warning(disable : 4996 4101)
 #include "vendor/SPIRV-Cross/spirv_cross_util.hpp"
 #include "vendor/SPIRV-Cross/spirv_hlsl.hpp"
 #include "vendor/SPIRV-Cross/spirv_msl.hpp"
@@ -7,7 +7,7 @@
 
 static const char *latest_exception_message;
 
-/*#define INTERNAL_RESULT(block_to_attempt)                 \
+#define INTERNAL_RESULT(block_to_attempt)                 \
     do                                                    \
     {                                                     \
         try                                               \
@@ -31,8 +31,7 @@ static const char *latest_exception_message;
             return ScInternalResult::Unhandled;           \
         }                                                 \
         return ScInternalResult::Unhandled;               \
-    } while (0)*/
-#define INTERNAL_RESULT(block_to_attempt) block_to_attempt
+    } while (0);
 
 extern "C"
 {
