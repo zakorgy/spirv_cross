@@ -1,4 +1,5 @@
 #include "vendor/SPIRV-Cross/spirv.hpp"
+#include "vendor/SPIRV-Cross/spirv_cross.hpp"
 #include "vendor/SPIRV-Cross/spirv_cross_util.hpp"
 #include "vendor/SPIRV-Cross/spirv_hlsl.hpp"
 #include "vendor/SPIRV-Cross/spirv_msl.hpp"
