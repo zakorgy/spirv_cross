@@ -16,6 +16,7 @@ fn main() {
         build.flag_if_supported("-std=c++14");
     }
     build.flag("-fexceptions");
+    build.flag("-static");
 
     build
         .file("src/wrapper.cpp")
