@@ -32,11 +32,11 @@ fn main() {
     use std::fs::OpenOptions;
     use std::io::prelude::*;
     let od = std::env::var("OUT_DIR").unwrap();
-    println!("{}", &format!("{}/../../../../../toolkit/library/XUL.list", od));
+    println!("{}", &format!("{}/../../../../../toolkit/library/build/XUL.list", od));
     let mut xul = OpenOptions::new()
         .write(true)
         .append(true)
-        .open(&format!("{}/../../../../../toolkit/library/XUL.list", od))
+        .open(&format!("{}/../../../../../toolkit/library/build/XUL.list", od))
         .unwrap();
 
     if let Err(e) = writeln!(xul, "\n{}/src/vendor/SPIRV-Cross/spirv_cross.o\n{}/src/vendor/SPIRV-Cross/spirv_cross_parsed_ir.o", od, od) {
